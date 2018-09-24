@@ -1,0 +1,8 @@
+/node_modules
+serviceAccountKey.json
+.DS_Store
+.env.local
+.env
+.env.development.local
+.env.test.local
+.env.production.local
