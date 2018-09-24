@@ -23,7 +23,8 @@ function get(req, res) {
 
 function post(req, res) {
   const todo = new Todo(req.body);
-  Todo.save()
+  todo
+    .save()
     .then(expected => {
       res.status(201).json(expected);
     })
