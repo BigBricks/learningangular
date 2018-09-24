@@ -9,4 +9,6 @@ server.use(cors());
 server.use(helmet());
 server.use(express.json());
 
+server.listen(port, () => console.log(`\n=== API up on port: ${port} ===\n`));
+
 module.exports = server;
