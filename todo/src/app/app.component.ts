@@ -9,6 +9,7 @@ class note {
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
+  readonly BASE_URL = "http://localhost:5000";
   constructor(private http: HttpClient) {}
   title = "todo";
   list = [];
