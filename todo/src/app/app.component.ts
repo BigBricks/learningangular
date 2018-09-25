@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-
+import { HttpClient } from "@angular/common/http";
 class note {
   todo: string;
 }
@@ -9,6 +9,7 @@ class note {
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
+  constructor(private http: HttpClient) {}
   title = "todo";
   list = [];
 
