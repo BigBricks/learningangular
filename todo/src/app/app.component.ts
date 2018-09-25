@@ -18,4 +18,7 @@ export class AppComponent {
     this.list.push(value);
     console.log(this.list);
   }
+  getTodo() {
+    this.list = this.http.get(this.BASE_URL + "/api/todo");
+  }
 }
