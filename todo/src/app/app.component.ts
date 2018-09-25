@@ -1,5 +1,8 @@
 import { Component } from "@angular/core";
 
+class note {
+  todo: string;
+}
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
