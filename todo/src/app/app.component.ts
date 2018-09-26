@@ -16,14 +16,17 @@ export class AppComponent {
   constructor(private http: HttpClient) {}
   title = "todo";
   list = [];
+  ngOnInit() {
+    this.lists = this.http.get<note[]>(this.BASE_URL + "/api/todo");
+  }
 
   // addItemTodo(value) {
   //   this.list.push(value);
   //   console.log(this.list);
   // }
-  getTodo() {
-    this.lists = this.http.get<note[]>(this.BASE_URL + "/api/todo");
-  }
+  // getTodo() {
+  //   this.lists = this.http.get<note[]>(this.BASE_URL + "/api/todo");
+  // }
   //Look into .do(() => this.subject.next(todo));
   addItemTodo(todo: string) {
     return this.http.post<note[]>("/api/todo", { todo });
