@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+
 class note {
   todo: string;
 }
@@ -10,7 +12,7 @@ class note {
 })
 export class AppComponent {
   readonly BASE_URL = "http://localhost:5000";
-  lists: any;
+  lists: Observable<note[]>;
   constructor(private http: HttpClient) {}
   title = "todo";
   list = [];
@@ -20,6 +22,6 @@ export class AppComponent {
     console.log(this.list);
   }
   getTodo() {
-    this.lists = this.http.get(this.BASE_URL + "/api/todo");
+    this.lists = this.http.get<note[]>(this.BASE_URL + "/api/todo");
   }
 }
