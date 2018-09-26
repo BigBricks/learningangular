@@ -5,7 +5,7 @@ const port = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 const cors = require("cors");
 const TodoRouter = require("./todo/todoRouter");
-const mongoURL = process.env.Database_Url || "mongodb://127.0.0.1/todoangular";
+const mongoURL = process.env.Database_Url || "mongodb://127.0.0.1/todoangular"; //DONT FORGET TO INITIALIZE MONGO LOCALLY
 const server = express();
 mongoose
   .connect(
