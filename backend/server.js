@@ -7,13 +7,6 @@ const cors = require("cors");
 const TodoRouter = require("./todo/todoRouter");
 const mongoURL = process.env.Database_Url || "mongodb://127.0.0.1/todoangular";
 const server = express();
-
-server.use(cors());
-server.use(helmet());
-server.use(express.json());
-
-server.use("/api/todo", TodoRouter);
-
 mongoose
   .connect(
     mongoURL,
@@ -25,6 +18,12 @@ mongoose
   .catch(err => {
     console.error("error", err);
   });
+
+server.use(cors());
+server.use(helmet());
+server.use(express.json());
+
+server.use("/api/todo", TodoRouter);
 
 server.listen(port, () => console.log(`\n=== API up on port: ${port} ===\n`));
 
