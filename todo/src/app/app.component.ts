@@ -24,6 +24,7 @@ export class AppComponent {
   getTodo() {
     this.lists = this.http.get<note[]>(this.BASE_URL + "/api/todo");
   }
+  //Look into .do(() => this.subject.next(todo));
   addItemTodo(todo: string) {
     return this.http.post<note[]>("/api/todo", { todo });
   }
