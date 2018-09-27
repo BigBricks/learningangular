@@ -1,12 +1,14 @@
 import { Injectable } from "@angular/core";
-
-class note {
-  todo: string;
-}
+import { note } from "./todo";
 
 @Injectable({
   providedIn: "root"
 })
 export class TodoService {
+  todos: note[] = [];
   constructor() {}
+  addItemTodo(todo: note): TodoService {
+    this.todos.push(todo);
+    return this;
+  }
 }
