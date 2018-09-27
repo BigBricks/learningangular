@@ -1,3 +1,3 @@
-class note {
+export class note {
   todo: string;
 }
