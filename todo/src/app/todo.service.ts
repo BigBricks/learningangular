@@ -11,4 +11,7 @@ export class TodoService {
     this.todos.push(todo);
     return this;
   }
+  getAllTodos(): note[] {
+    return this.todos;
+  }
 }
