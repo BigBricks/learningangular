@@ -6,7 +6,7 @@ import { note } from "../todo";
   styleUrls: ["./todo.component.css"]
 })
 export class TodoComponent implements OnInit {
-  todo: note = {
+  Todo: note = {
     todo: "freedom"
   };
   constructor() {}
