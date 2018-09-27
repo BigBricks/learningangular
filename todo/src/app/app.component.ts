@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { TodoDataService } from "./todo.service";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 
@@ -8,7 +9,7 @@ import { Observable } from "rxjs";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  readonly BASE_URL = "http://localhost:5000";
+  // readonly BASE_URL = "http://localhost:5000";
   // lists: Observable<note[]>;
   // constructor(private http: HttpClient) {}
   title = "todo";
